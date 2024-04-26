@@ -21,28 +21,28 @@ body {
   background-color: white;
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
-.nav .nav-logo {
-  width: 7rem;
-}
+  .nav-logo {
+    width: 7rem;
+  }
 
-.nav .nav-menu {
-  display: flex;
-  list-style: none;
-  column-gap: 1.5rem;
-  justify-content: space-between;
-}
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    column-gap: 1.5rem;
+    justify-content: space-between;
 
-.nav .nav-menu .nav-menu-link a {
-  color: black;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
+    .nav-menu-link a {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
 
-.nav .nav-menu .nav-menu-link a:hover {
-  color: #7cb342;
+      &:hover {
+        color: #7cb342;
+      }
+    }
+  }
 }
