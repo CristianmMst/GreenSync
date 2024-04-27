@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --green-dark: #1b3610;
+  --green-light: #7cb342;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,12 +41,28 @@ body {
       color: black;
       font-size: 1.2rem;
       font-weight: bold;
+      position: relative;
       text-decoration: none;
       text-transform: uppercase;
       transition: color 0.3s ease;
 
       &:hover {
-        color: #7cb342;
+        color: var(--green-dark);
+
+        &:after {
+          width: 100%;
+        }
+      }
+
+      &:after {
+        left: 0;
+        width: 0;
+        content: "";
+        height: 4px;
+        bottom: -10px;
+        position: absolute;
+        transition: width 0.3s ease;
+        background-color: var(--green-light);
       }
     }
   }
