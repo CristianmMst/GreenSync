@@ -2,8 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+  scroll-behavior: smooth;
   --green-dark: #1b3610;
   --green-light: #7cb342;
+  --green-lighter: #75cf14;
 }
 
 * {
@@ -18,11 +20,14 @@ body {
 }
 
 .nav {
+  z-index: 2;
+  width: 100%;
   display: flex;
+  position: fixed;
   user-select: none;
-  padding: 10px 40px;
-  margin-bottom: 20px;
   align-items: center;
+
+  padding-inline: 2rem;
   background-color: white;
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -34,10 +39,11 @@ body {
     justify-content: space-between;
 
     .nav-left-logo {
-      width: 7rem;
+      width: 6rem;
+      padding: 0.2rem;
     }
     .nav-left-name {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 600;
       color: var(--green-light);
 
@@ -83,5 +89,81 @@ body {
         background-color: var(--green-light);
       }
     }
+  }
+}
+
+.background-blur {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  filter: blur(4px);
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("../img/cannabis.webp");
+
+  &::before {
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 59, 0, 0.6);
+  }
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+
+  .main-content {
+    top: 50%;
+    left: 30%;
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    .main-content-bold {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    .main-content-text:nth-of-type(1) {
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .main-content-text {
+      width: 33rem;
+      font-weight: 400;
+      color: rgb(219, 219, 219);
+
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--green-light);
+        transition: color 0.5s ease;
+
+        &:hover {
+          color: var(--green-lighter);
+        }
+      }
+    }
+  }
+
+  .mobile {
+    top: 50%;
+    right: 10%;
+    width: 20rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
   }
 }
