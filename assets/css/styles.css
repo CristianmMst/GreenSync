@@ -41,6 +41,7 @@ body {
       width: 6rem;
       padding: 0.2rem;
     }
+
     .nav-left-name {
       font-size: 2.5rem;
       font-weight: 600;
@@ -189,7 +190,7 @@ body {
   }
 
   .objectives-specific {
-    width: 35rem;
+    width: 29rem;
     height: 10rem;
 
     .objectives-specific-title {
@@ -205,8 +206,8 @@ body {
     .objective-specific-items {
       user-select: text;
       text-wrap: pretty;
-      font-size: 0.9rem;
-      margin-left: 3rem;
+      margin-left: 2rem;
+      font-size: 0.85rem;
       line-height: 1.5rem;
     }
   }
@@ -265,13 +266,16 @@ details[open] {
       }
     }
   }
+
   .team-container {
     .team-title {
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
+
     .team-members {
       list-style: none;
+
       .team-members-member {
         font-size: 0.8rem;
         line-height: 1.5rem;
