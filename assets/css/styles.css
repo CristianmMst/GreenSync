@@ -169,13 +169,14 @@ body {
 
 .objectives {
   width: 100%;
-  padding: 5rem;
   display: flex;
+  min-height: 35rem;
   column-gap: 10rem;
+  align-items: center;
   justify-content: center;
 
   .objective-general {
-    z-index: 2;
+    height: 10rem;
 
     .objective-general-title {
       margin-bottom: 1rem;
@@ -189,40 +190,92 @@ body {
 
   .objectives-specific {
     width: 35rem;
+    height: 10rem;
 
     .objectives-specific-title {
       margin-bottom: 1rem;
-      a {
-        color: black;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
+      text-transform: uppercase;
     }
+  }
 
-    .objectives-specific-text {
-      li a {
-        color: black;
-        text-decoration: none;
-      }
+  .objective-specific {
+    user-select: none;
+    line-height: 2rem;
 
-      ul {
-        margin-left: 2rem;
-      }
+    .objective-specific-items {
+      user-select: text;
+      text-wrap: pretty;
+      font-size: 0.9rem;
+      margin-left: 3rem;
+      line-height: 1.5rem;
     }
   }
 }
 
-.objective {
-  ul {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s ease;
-  }
+details {
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
 
-  &:target ul {
-    opacity: 1;
-    overflow: visible;
-    max-height: 150px;
+details:not([open]) {
+  height: 2em;
+}
+
+details[open] {
+  height: 10rem;
+}
+
+.video-container {
+  display: grid;
+  padding-block: 4rem;
+  place-content: center;
+  background-color: var(--green-light);
+
+  .video {
+    width: 60rem;
+  }
+}
+
+.footer {
+  display: flex;
+  padding: 2rem;
+  column-gap: 5rem;
+
+  .footer-left {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .footer-left-logo {
+      width: 6rem;
+      padding: 0.2rem;
+    }
+
+    .footer-left-name {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--green-light);
+
+      .nav-left-name-sync {
+        color: black;
+        font-weight: 400;
+        font-family: "Arimo";
+      }
+    }
+  }
+  .team-container {
+    .team-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .team-members {
+      list-style: none;
+      .team-members-member {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+    }
   }
 }
