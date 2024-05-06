@@ -239,8 +239,8 @@ details[open] {
 
 .footer {
   display: flex;
-  padding: 2rem;
-  column-gap: 5rem;
+  padding: 2rem 5rem;
+  justify-content: space-between;
 
   .footer-left {
     display: flex;
@@ -255,6 +255,7 @@ details[open] {
     }
 
     .footer-left-name {
+      user-select: none;
       font-size: 2.5rem;
       font-weight: 600;
       color: var(--green-light);
@@ -277,7 +278,7 @@ details[open] {
       list-style: none;
 
       .team-members-member {
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 1.5rem;
       }
     }
