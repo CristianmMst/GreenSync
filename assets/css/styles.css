@@ -92,42 +92,20 @@ body {
   }
 }
 
-.background-blur {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 100vh;
-  filter: blur(4px);
-  position: relative;
+.main-container {
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url("../img/cannabis.webp");
 
-  &::before {
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(0, 59, 0, 0.6);
-  }
-}
-
-.main-container {
-  display: flex;
-  position: relative;
-
   .main-content {
-    top: 50%;
-    left: 30%;
     color: white;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    justify-content: space-around;
+    background-color: rgba(0, 59, 0, 0.4);
 
     .main-content-bold {
       font-size: 3rem;
@@ -160,11 +138,7 @@ body {
   }
 
   .mobile {
-    top: 50%;
-    right: 10%;
     width: 20rem;
-    position: absolute;
-    transform: translate(-50%, -50%);
   }
 }
 
