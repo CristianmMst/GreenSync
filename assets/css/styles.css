@@ -15,7 +15,6 @@
 }
 
 body {
-  position: absolute;
   font-family: "Poppins", sans-serif;
 }
 
@@ -330,7 +329,8 @@ details[open] {
   }
 
   .main-container {
-    margin-top: 5rem;
+    padding-top: 5rem;
+
     .main-content {
       row-gap: 2rem;
       padding-inline: 1rem;
