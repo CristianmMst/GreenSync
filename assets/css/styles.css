@@ -347,8 +347,8 @@ details[open] {
 
   .objectives {
     row-gap: 5rem;
-    min-height: 75vh;
-    margin-top: 2rem;
+    padding-block: 6rem;
+    height: fit-content;
     flex-direction: column;
     justify-content: start;
 
@@ -357,12 +357,11 @@ details[open] {
     }
 
     .objectives-specific {
-      height: 10rem;
+      height: auto;
       width: fit-content;
 
       .objectives-specific-title {
         margin-bottom: 1rem;
-        text-transform: uppercase;
       }
     }
 
@@ -371,19 +370,18 @@ details[open] {
       line-height: 2rem;
 
       .objective-specific-items {
+        height: auto;
         max-width: 20rem;
-        user-select: text;
-        text-wrap: pretty;
-        margin-left: 2rem;
-        font-size: 0.85rem;
-        line-height: 1.5rem;
       }
     }
   }
 
   details[open] {
     height: 13rem;
-    max-height: 14rem;
+    max-height: 13rem;
+  }
+  details:nth-of-type(4) {
+    max-height: 8rem;
   }
 
   .video-container {
